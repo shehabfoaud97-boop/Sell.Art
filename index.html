@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio &amp; Shop</title>
+  <meta name="description" content="Original digital art — prints, downloads and commissions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/art/summer-shore.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#top" class="brand" data-artist-name>Your Name</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#gallery">Gallery</a>
+      <a href="#shop">Shop</a>
+      <a href="#commissions">Commissions</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Original digital art</p>
+        <h1 data-artist-name>Your Name</h1>
+        <p class="tagline" data-tagline></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#gallery">See the work</a>
+          <a class="btn btn-ghost" href="#commissions">Commission a piece</a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <img id="hero-img" alt="" loading="eager">
+      </figure>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-head">
+        <h2>Gallery</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filter by tag"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="shop" class="section section-alt">
+      <div class="section-head">
+        <h2>Shop</h2>
+        <p class="muted">Prints, stickers, apparel and digital downloads, shipped by trusted print partners.</p>
+      </div>
+      <div class="shop-links" id="shop-links"></div>
+      <p class="muted small" id="shop-empty" hidden>Shop links coming soon. Want a print now? <a href="#commissions">Get in touch</a>.</p>
+    </section>
+
+    <section id="commissions" class="section">
+      <div class="section-head">
+        <h2>Commissions <span class="status" id="comm-status"></span></h2>
+        <p class="muted">Custom pieces painted to your idea. Prices are a starting point; final quote depends on detail.</p>
+      </div>
+      <div class="tiers" id="tiers"></div>
+
+      <form class="comm-form" id="comm-form" novalidate>
+        <div class="row">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <label>Type
+          <select name="tier" id="tier-select"></select>
+        </label>
+        <label>Describe your idea
+          <textarea name="idea" rows="5" required placeholder="Who or what, the mood, colours, background, size, deadline…"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send request</button>
+        <p class="form-note muted small" id="form-note" role="status"></p>
+      </form>
+    </section>
+
+    <section id="about" class="section section-alt about">
+      <h2>About</h2>
+      <p data-about></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social" id="social"></div>
+    <p class="small muted">© <span id="year"></span> <span data-artist-name>Your Name</span>. All artwork is protected by copyright. Please don’t reuse it without permission.</p>
+  </footer>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Artwork details">
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <div class="lb-body">
+      <img id="lb-img" alt="">
+      <div class="lb-info">
+        <h3 id="lb-title"></h3>
+        <p class="muted small" id="lb-meta"></p>
+        <p id="lb-desc"></p>
+        <p class="price" id="lb-price"></p>
+        <div class="lb-actions" id="lb-actions"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/artworks.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

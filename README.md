@@ -41,5 +41,5 @@ If you'd rather receive submissions without exposing your email, a free service 
 
 ## Licensing
 
-- **Website code** (`index.html`, `css/`, `js/`) is covered by the CC0 `LICENSE` file.
-- **Artwork** (everything in `assets/art/`) is **© the artist, all rights reserved**. It is *not* released under CC0 and may not be copied, reused or sold without permission.
+- **Website code** (`index.html`, `css/`, `js/`) is released under the MIT License (see `LICENSE`).
+- **Artwork** (everything in `assets/art/`) is **© the artist, all rights reserved**. It is *not* covered by the MIT License and may not be copied, reused or sold without permission.
